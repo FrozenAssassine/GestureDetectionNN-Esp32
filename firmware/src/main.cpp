@@ -5,6 +5,8 @@
 #include "nn_trained.h"
 #include "collectAccelData.h"
 
+bool recordingMode = false; // set to true for recording data
+
 NeuralNetwork *nn = new NeuralNetwork(3);
 
 void initModel()
@@ -29,6 +31,12 @@ void setup()
 
 void loop()
 {
+  if (recordingMode)
+  {
+    startCollection();
+    return;
+  }
+
   if (Serial.available())
   {
     String cmd = Serial.readStringUntil('\n');
