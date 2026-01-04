@@ -43,3 +43,6 @@ Run the script, that converts the torch model to the esp32 model header file.
 ### 4. Inference
 
 In the main.cpp, set the recordingMode to false and flash the code. Open the Serial monitor, press enter, perform a movement, and the ESP32 will tell you what gesture it detected.
+
+## 📷 Prediction 
+<img width="561" height="258" alt="image" src="https://github.com/user-attachments/assets/63069c87-d693-4a16-91d9-b99ede0ee0ef" />
