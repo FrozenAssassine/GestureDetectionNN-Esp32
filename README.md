@@ -18,6 +18,11 @@ The model is a simple feedforward network. I built the C++ implementation to mir
 - **Performance**: Optimized to run fast on ESP32 hardware without heavy libraries.
 - **Dependency**: This is based on my [Neural Network from scratch on ESP32/Arduino](https://github.com/FrozenAssassine/NeuralNetwork-Arduino).
 
+Consists of:
+- Input Layer (13 neurons): Accepts raw accelerometer features.
+- Hidden Layer (32 neurons): Processes complex movement patterns with ReLU activation.
+- Output Layer (4 neurons): Produces probability scores for each gesture using Softmax.
+
 ## 🏗️ Quick Start
 
 ### 1. Data Collection
