@@ -10,8 +10,6 @@ The workflow is split into three steps:
 2. **Train**: Run the Python scripts to process your data and train a PyTorch model.
 3. **Deploy**: The script exports the model weights and biases as a C++ header file. Copy this back to your ESP32 to start recognizing gestures.
 
----
-
 ## 🧠 The Neural Network
 
 The model is a simple feedforward network. I built the C++ implementation to mirror the PyTorch architecture exactly so the weights can be dropped right in.
