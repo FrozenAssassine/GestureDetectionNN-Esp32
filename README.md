@@ -1,4 +1,4 @@
-# GestureDetectionNN-Esp32✋🏼
+# Local Gesture Detection NN on Esp32
 
 This project lets you record gestures with an ESP32, train them in PyTorch, and run them back on device using a custom neural network I wrote. It’s designed to be flexible, so you can easily train and swap your own gestures without ever having to hardcode a single movement.
 
