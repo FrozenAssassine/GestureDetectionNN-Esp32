@@ -1,0 +1,4 @@
+1: wave
+2: hand shake
+3: draw circle (left and right)
+4: arm raised
