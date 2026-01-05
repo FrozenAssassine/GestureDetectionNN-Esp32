@@ -1,4 +1,4 @@
-# GestureDetectionNN-Esp32✋🏼
+# Local Gesture Detection NN on Esp32
 
 This project lets you record gestures with an ESP32, train them in PyTorch, and run them back on device using a custom neural network I wrote. It’s designed to be flexible, so you can easily train and swap your own gestures without ever having to hardcode a single movement.
 
@@ -10,8 +10,6 @@ The workflow is split into three steps:
 2. **Train**: Run the Python scripts to process your data and train a PyTorch model.
 3. **Deploy**: The script exports the model weights and biases as a C++ header file. Copy this back to your ESP32 to start recognizing gestures.
 
----
-
 ## 🧠 The Neural Network
 
 The model is a simple feedforward network. I built the C++ implementation to mirror the PyTorch architecture exactly so the weights can be dropped right in.
@@ -19,6 +17,11 @@ The model is a simple feedforward network. I built the C++ implementation to mir
 - **Labels**: Currently set up for 4 custom gestures.
 - **Performance**: Optimized to run fast on ESP32 hardware without heavy libraries.
 - **Dependency**: This is based on my [Neural Network from scratch on ESP32/Arduino](https://github.com/FrozenAssassine/NeuralNetwork-Arduino).
+
+Consists of:
+- Input Layer (13 neurons): Accepts raw accelerometer features.
+- Hidden Layer (32 neurons): Processes complex movement patterns with ReLU activation.
+- Output Layer (4 neurons): Produces probability scores for each gesture using Softmax.
 
 ## 🏗️ Quick Start
 
@@ -43,3 +46,6 @@ Run the script, that converts the torch model to the esp32 model header file.
 ### 4. Inference
 
 In the main.cpp, set the recordingMode to false and flash the code. Open the Serial monitor, press enter, perform a movement, and the ESP32 will tell you what gesture it detected.
+
+## 📷 Prediction 
+<img width="561" height="258" alt="image" src="https://github.com/user-attachments/assets/63069c87-d693-4a16-91d9-b99ede0ee0ef" />
