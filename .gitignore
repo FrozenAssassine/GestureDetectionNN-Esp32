@@ -51,5 +51,3 @@ docs/_build/
 # Pipenv und Poetry Lock-Dateien (optional)
 Pipfile.lock
 poetry.lock
-Kopieren
-Wichtige Überlegungen:

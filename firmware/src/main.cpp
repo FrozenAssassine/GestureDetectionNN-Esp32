@@ -13,7 +13,7 @@ void initModel()
 {
   nn->StackLayer(new InputLayer(13));
   nn->StackLayer(new DenseLayer(32, ActivationKind::Relu));
-  nn->StackLayer(new OutputLayer(4, ActivationKind::Softmax));
+  nn->StackLayer(new OutputLayer(6, ActivationKind::Softmax));
 
   nn->LoadTrainedData(nn_layers, nn_total_layers);
 
@@ -54,8 +54,8 @@ void loop()
 
         float *pred = nn->Predict(data);
         Serial.printf(
-            "Input: [%.0f, %.0f] -> Softmax: [%.4f, %.4f, %.4f, %.4f] -> Class: %d\n",
-            data[0], data[1], pred[0], pred[1], pred[2], pred[3], (ArgMax(pred, 4) + 1));
+            "Input: [%.0f, %.0f] -> Softmax: [%.4f, %.4f, %.4f, %.4f, %.4f, %.4f] -> Class: %d\n",
+            data[0], data[1], pred[0], pred[1], pred[2], pred[3], pred[4], pred[5], (ArgMax(pred, 6) + 1));
       }
       else
       {

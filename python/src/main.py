@@ -41,7 +41,7 @@ model = GestureNet(in_features, num_classes)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01)
 
-epochs = 500
+epochs = 800
 for epoch in range(epochs):
     optimizer.zero_grad()
     logits = model(X)
